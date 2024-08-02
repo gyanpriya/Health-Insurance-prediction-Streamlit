@@ -24,6 +24,49 @@ Ensure you have the following packages installed:
 - `seaborn`
 - `tableau-api-lib` (if you are interacting with Tableau's API)
 
+## Problem Statement
+
+Accurately predicting insurance costs can help insurance companies to price their policies more effectively and enable customers to get better insights into their insurance costs.
+
+## Steps Taken to Solve the Problem
+
+### 1. Exploratory Data Analysis (EDA)
+
+- **Data Loading:** Loaded the dataset from `.csv` files in the `DATA` folder.
+- **Data Cleaning:** Handled missing values, outliers, and incorrect data types.
+- **Visualization:** Used various plots and charts to understand the distribution of features and their relationships with the target variable (insurance cost).
+
+### 2. Hypothesis Testing
+
+- **Feature Relationships:** Conducted hypothesis tests to determine the statistical significance of the relationships between features and the target variable.
+- **Correlation Analysis:** Analyzed correlations to identify important features for the prediction model.
+
+### 3. Machine Learning Modeling
+
+- **Pre-processing:** Applied data pre-processing steps including scaling, encoding categorical variables, and feature engineering.
+- **Model Training:** Trained multiple models including Linear Regression, Random Forest, and Gradient Boosting.
+- **Model Evaluation:** Evaluated models using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared. Selected the best model based on performance metrics.
+
+### Target Metric and Scores
+
+The primary target metric for this project is the Mean Absolute Error (MAE), as it provides a straightforward interpretation of the average error in the predicted insurance costs.
+
+### 4. Deployment
+
+- **Streamlit App:** Developed a Streamlit application (`streamlit_insurance.py`) to serve the model and provide an interface for users to input their data and get predictions.
+- **Web Interface:** Streamlit provides an easy-to-use web interface for real-time predictions.
+- **Model Integration:** Integrated the trained models (`rf_model.pkl` and `gb_model.pkl`) into the Streamlit app for real-time predictions.
+
+## Why This Approach Was Chosen
+
+The combination of EDA, hypothesis testing, and machine learning modeling ensures a comprehensive approach to solving the problem:
+
+- **EDA:** Helps in understanding the data and uncovering patterns and relationships.
+- **Hypothesis Testing:** Provides statistical validation of the relationships between features and the target variable.
+- **Machine Learning Models:** Enable accurate predictions by capturing complex relationships in the data.
+- **Streamlit Deployment:** Makes the solution accessible and user-friendly, allowing for real-time predictions through a web interface.
+- **Tableau Dashboards:** Offer interactive and visual summaries that enhance understanding and communication of the results.
+
 You can install these packages using pip:
 
 ```bash
